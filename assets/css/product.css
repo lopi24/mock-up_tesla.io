@@ -1,0 +1,121 @@
+.navs {
+    box-shadow: 0px 2px 4px 0px gray;
+    background-color: white;
+    height: 3rem;
+}
+
+.product-container {
+    font-family: 'Quicksand';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    width: 100%;
+    padding: 0 8rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.product-container .row {
+    /* height: 100%; */
+    width: 100%;
+}
+
+.section-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+}
+.section-container section {
+    width: 50%;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-container section .dets {
+    padding: 5px 0;
+}
+
+.sample-image {
+    /* height: 100%; */
+    height: auto;
+    max-width: 60vh;
+    width: 45%;
+    /* background: gray; */
+}
+.sample-image img {
+    height: 100%;
+    width: 100%;
+}
+#orderButton {
+    width: 150px;
+    /* height: 100%; */
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3d69e1;
+    text-decoration: none;
+    color: #3d69e1;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#orderButton:hover {
+    background: #3d69e1;
+    color: white;
+}
+#orderButtonSection #form-container {
+    display: flex;
+    justify-content: space-between;
+    /* max-height: 150px; */
+}
+#orderContainer {
+    margin-right: 10%;
+}
+#quantity {
+    width: 100%;
+    display: flex;
+}
+#qty {
+    text-align: center;
+    width: 50px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .product-container {
+        /* margin-top: 2rem; */
+        padding: 0 6rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .product-container {
+        /* margin-top: 2rem; */
+        padding: 0 3rem;
+    }
+    .product-container .row .section-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-container .row .section-container .sample-image {
+        width: 80%;
+        
+    }
+    .product-container .row .section-container section {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .navs {
+        height: 3rem;
+    }
+    .product-container {
+        width: auto;
+    }
+    .product-container .row .section-container {
+        display: block;
+        width: auto;
+    }
+}

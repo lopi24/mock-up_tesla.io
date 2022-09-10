@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.goBack {
+    margin: 1rem 0 0 1rem;
+}
+
+.viewProductData {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 100vh;
+}
+
+.viewProductContainer {
+    height: 100%;
+    width: 100%;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.viewProductContainer .productDetails {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Quicksand';
+}
+
+.viewProductContainer .productDetails div {
+    display: flex;
+}
+
+.viewProductContainer .productDetails div label {
+    width: 100%;
+}
+.viewProductContainer .productDetails div input {
+    border: none;
+    border-bottom: 1px solid gray;
+    font-size: 1em;
+    width: 98%;
+    padding: 1%;
+}
+.viewProductContainer .productDetails div textarea {
+    resize: none;
+    width: 100%;
+    height: auto;
+    border: none;
+    border-bottom: 1px solid gray;
+    min-height: 4rem;
+    padding: .5rem;
+}
+
+.viewProductContainer .productDetails .updateSection {
+    display: flex;
+    justify-content: space-evenly;
+}
+.viewProductContainer .productDetails .updateSection button {
+    width: 30%;
+    padding: 5px 10px;
+}
+
+.deleteDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 10%;
+}
+.deleteDiv button {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding: 15px 25px;
+    /* width: 30%; */
+    background-color: none;
+    border: none;
+    color: gray;
+    transition: .5s;
+}
+.deleteDiv button:hover {
+    background-color: red;
+    color: white;
+}
+
+.viewProductData .viewProductContainer .image {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 4rem; 
+}
+
+.viewProductData .viewProductContainer .image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .viewProductContainer .productDetails {
+        padding: 0;
+    }
+    .viewProductData .viewProductContainer .image {
+        padding: 0 1rem;
+        width: 80%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .viewProductData {
+        height: 100%;
+    }
+    .productDetails {
+        padding: 1rem 0;
+    }
+    .productDetails div {
+        padding: 1rem 0;
+    }
+
+    .viewProductContainer {
+        display: block;
+    }
+    .viewProductData .viewProductContainer .image {
+        padding: 0;
+        width: auto;
+    }
+    .viewProductContainer .image img {
+        width: auto;
+    }
+
+    .deleteDiv {
+        padding: 0;
+        padding-bottom: 1rem;
+        margin: 0;
+        display: flex;
+        /* height: 100%; */
+        /* width: 100%;
+        position: absolute;
+        bottom: 0; */
+    }
+    .deleteDiv button {
+        padding: 5px 10px;
+    }
+}

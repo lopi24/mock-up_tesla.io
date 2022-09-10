@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: tesla */
+}
+
+.navs {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    transition: .5s;
+    height: 5rem;
+
+    /* sticky */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+
+@font-face {
+    font-family: tesla;
+    src: url(assets/font/Tesla/TESLA.ttf);
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(assets/font/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* height: 3em; */
+    font-family: tesla;
+    letter-spacing: .75em;
+    font-size: 18px;
+    width: 50%;
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    /* height: 3em; */
+    text-decoration: none;
+    font-family: Quicksand;
+    color: black;
+    font-weight: 500;
+    padding: 0px 0.5em;
+    white-space: nowrap;
+}
+
+.tag {
+    z-index: 100;
+}
+
+.navs.sticky {
+    /* position: fixed; */
+    top: 0;
+    /* background: black; */
+    opacity: 0.3;
+    transition: .5s;
+    /* z-index: 99; */
+    /* width: 100%; */
+    transition: 1s;
+    height: 2.5rem;
+    background: black;
+    color: white;
+    z-index: 100;
+}
+.tag.active {
+    color: white;
+}
+
+.navs:hover {
+    opacity: 1;
+}
+
+.tag:hover {
+    font-weight: bold;
+}
+
+
+
+
+
+.model-3,
+.model-s,
+.model-x,
+.model-y {
+    position: relative;
+    height: 100vh;
+    width: auto;
+}
+
+.model-3 .info,
+.model-s .info,
+.model-x .info,
+.model-y .info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    z-index: 99;
+    /* mix-blend-mode: difference; */
+    /* color: gray; */
+}
+.info .range,
+.info .speed,
+.info .top-speed,
+.info .horse-power {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5% 0;
+    width: 30%;
+    /* text-align: start; */
+    /* justify-content: space-evenly; */
+    /* height: 100%; */
+}
+
+.model-3 .img,
+.model-s .img,
+.model-x .img,
+.model-y .img   {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    object-fit: contain;
+}
+
+.model-3 .img-1,
+.model-s .model-s_img-1,
+.model-x .model-x_img-1,
+.model-y .model-y_img-1 {
+    background: linear-gradient(to right top, black, gray, white);
+    height: 100%;
+    width: 100%;
+    clip-path: circle(0% at 0% 100%);
+    transition: all 0.7s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.model-s .model-s_img-1,
+.model-x .model-x_img-1 {
+    background: linear-gradient(to left top, black, gray, white);
+}
+.model-3 .img-1 {
+    background: linear-gradient(to top, black, white, gray);
+}
+.model-y .model-y_img-1 {
+    background: linear-gradient(to right top, black, gray, white);
+}
+
+.model-3 .img-1 img {
+    height: auto;
+    width: 70%;
+
+    padding-left: 20%;
+}
+.model-s .model-s_img-1 img {
+    height: auto;
+    width: 100%;
+
+    padding-left: 20%;
+}
+.model-x .model-x_img-1 img {
+    height: auto;
+    width: 100%;
+
+    padding-left: 20%;
+}
+.model-y .model-y_img-1 img {
+    height: auto;
+    width: 95%;
+
+    padding-left: 25%;
+}
+
+
+.model-3 .img-2,
+.model-s .model-s_img-2,
+.model-x .model-x_img-2,
+.model-y .model-y_img-2 {
+    background: linear-gradient(to top, black, gray, white);
+    height: 100%;
+    width: 100%;
+    clip-path: circle(0% at 0% 100%);
+    transition: all 0.7s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.model-3 .img-2 {
+    background: linear-gradient(to top, black, gray, white);
+}
+
+.model-s .model-s_img-2 img {
+    height: auto;
+    width: 80%;
+
+    padding-left: 20%;
+}
+.model-3 .img-2 img {
+    height: auto;
+    width: 75%;
+
+    padding-left: 20%;
+}
+.model-x .model-x_img-2 img {
+    height: auto;
+    width: 95%;
+
+    padding-left: 20%;
+}
+.model-y .model-y_img-2 img {
+    height: auto;
+    width: 70%;
+
+    padding-left: 20%;
+}
+
+.model-3 .img-3,
+.model-s .model-s_img-3,
+.model-x .model-x_img-3,
+.model-y .model-y_img-3 {
+    background: linear-gradient(to left top, black, gray, white);
+    height: 100%;
+    width: 100%;
+    clip-path: circle(0% at 0% 100%);
+    transition: all 0.7s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.model-y .model-y_img-3 {
+    background: linear-gradient(to left top, black, gray, white);   
+}
+.model-x .model-x_img-3 {
+    background: linear-gradient(to left top, black, white, gray);   
+}
+.model-s .model-s_img-3 {
+    background: linear-gradient(to top, black, white, gray);  
+}
+
+.model-3 .img-3 img {
+    height: auto;
+    width: 75%;
+
+    padding-left: 20%;
+}
+.model-s .model-s_img-3 img {
+    height: auto;
+    width: 80%;
+
+    padding-left: 25%;
+}
+.model-x .model-x_img-3 img {
+    height: auto;
+    width: 70%;
+
+    padding-left: 20%;
+}
+.model-y .model-y_img-3 img {
+    height: auto;
+    width: 100%;
+
+    padding-left: 20%;
+}
+
+.model {
+    position: absolute;
+    top: 15%;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.model h1 {
+    font-family: Quicksand;
+    color: black;
+    text-shadow: 0px 0px 10px white;
+    font-size: 38px;
+    text-align: left;
+}
+
+.model-3 h2,
+.model-s h2,
+.model-x h2,
+.model-y h2 {
+    font-family: Quicksand;
+    color: black;
+    /* text-shadow: 0px 0px 10px white; */
+    /* font-weight: 900; */
+    /* mix-blend-mode: difference; */
+}
+.model-3 p,
+.model-s p,
+.model-x p,
+.model-y p {
+    font-family: Quicksand;
+    /* font-weight: bold; */
+    color: black;
+    /* text-shadow: 2px 2px 5px white; */
+}
+
+.model-3 .active,
+.model-s .active,
+.model-x .active,
+.model-y .active {
+    clip-path: circle(150% at 0% 100%);
+}
+
+.model-3 .sliders,
+.model-s .sliders,
+.model-x .sliders,
+.model-y .sliders {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    display: flex;
+}
+
+.sliders label {
+    height: 13px;
+    width: 13px;
+    border: 2px solid rgb(142, 197, 252);
+    margin: 0 3px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.sliders .active {
+    width: 35px;
+    border-radius: 14px;
+    background: rgb(142, 197, 252);
+}
+
+.sliders label:hover {
+    background: rgba(142, 197, 252);
+}
+
+#more {
+
+    z-index: 99;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 13%;
+    border-radius: 16px;
+    padding: 10px 35px;
+    background: none;
+    background-color: white;
+    font-family: Quicksand;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+#more:hover {
+    background-color: #3d69e1;
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 20%; */
+    /* background: linear-gradient(to left top, black, gray, black); */
+    background: black;
+    font-family: Quicksand;
+    color: white;
+    font-size: 12px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 5px 0;
+}
+
+footer div p {
+    text-align: center;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/styles/add-product.css">
+    <title>Admin - Add Product</title>
+</head>
+<body>
+    <div class="goBack"><a href="./admin.html">go_back</a></div>
+    <div class="create-product_container">
+
+        <div class="main">
+            <h1>Create Product</h1>
+            <div class="form-container">
+                <form id="create-product" enctype="multipart/form-data">
+                    <input 
+                        type="name"
+                        id="productName"
+                        placeholder="Name"
+                    >
+
+                    <textarea 
+                        type="description"
+                        id="productDescription"
+                        placeholder="Description"
+                    ></textarea>
+
+                    <input 
+                        type="price"
+                        id="productPrice"
+                        placeholder="Price"
+                    >
+
+                    <select id="category-select" type="category">
+                        <option value="">--Please choose category--</option>
+                        <option value="charging">Charging</option>
+                        <option value="vehicle_accessories">Vehicle Accessories</option>
+                        <option value="apparel">Apparel</option>
+                    </select>
+
+                    <input 
+                        id='files' 
+                        type="file"
+                        name="uploaded_file"
+                    >
+
+                    <button type="submit">Create Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/addProduct.js"></script>
+</body>
+</html>

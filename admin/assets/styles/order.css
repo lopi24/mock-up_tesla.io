@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.goBack {
+    margin: 1rem 0 0 1rem;
+}
+
+.viewOrderData {
+    font-family: 'Quicksand';
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    /* border: 1px solid black; */
+    padding: 0% 6%;
+}
+.viewOrderData h3 {
+    padding-top: 10px;
+}
+.viewOrderData h3:nth-child(4) {
+    margin-top: 10px;
+}
+
+.viewOrderData h3 span {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.orderDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3rem;
+
+    overflow: scroll;
+}
+.viewOrderData .orderDetailsContainer thead {
+    height: 5em;
+}
+.viewOrderData .orderDetailsContainer thead tr {
+    display: flex;
+    align-items: center;
+    height: 5em;
+    width: 100%;
+}
+.viewOrderData .orderDetailsContainer thead tr th {
+    padding: 0 10px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+.viewOrderData .orderDetailsContainer tbody {
+    height: 100%;
+    width: 100%;
+    min-width: 598px;
+}
+.viewOrderData .orderDetailsContainer tbody tr {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 5rem;
+    border: 1px solid #dddddd;
+    width: 100%;
+}
+.viewOrderData .orderDetailsContainer tbody tr td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #dddddd;
+    padding: 5px 0;
+}
+.viewOrderData .orderDetailsContainer tbody tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+
+.viewOrderData .orderDetailsContainer tbody tr td img {
+    height: 100%;
+}
+
+.orderDetailsContainer tbody tr td:nth-child(2) {
+    word-wrap: break-word;  
+    word-break: break-all;
+    padding: 0 5px;
+}
+
+.viewOrderData .orderDetailsContainer tbody .over-all-total-amount-div h4 {
+    width: 85.7%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2%;
+    /* display: flex; */
+    /* flex-basis: 100%; */
+    /* justify-content: flex-end; */
+    /* padding: 2rem 4rem 0 0; */
+}
+.viewOrderData .orderDetailsContainer tbody .over-all-total-amount-div td {
+    width: 14.3%;
+}
+/* tbody .over-all-total-amount-div h4 {
+    margin: 0 6.5rem 0 0;
+} */

@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.navs {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    transition: .5s;
+    height: 5em;
+
+    background-color: white;
+
+    box-shadow: 0px 2px 4px 0px gray;
+
+    /* sticky */
+    position: fixed;
+    /* top: 0;
+    right: 0; */
+    width: 100%;
+    /* z-index: 99; */
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* height: 3em; */
+    font-family: tesla;
+    letter-spacing: .75em;
+    font-size: 18px;
+    width: 50%;
+}
+
+.nav a {
+    display: flex;
+    align-items: center;
+    /* height: 3em; */
+    text-decoration: none;
+    font-family: Quicksand;
+    color: black;
+    font-weight: 500;
+    padding: 0px 0.5em;
+    white-space: nowrap;
+}
+
+.navs:hover {
+    opacity: 1;
+}
+
+.tag:hover {
+    font-weight: bold;
+}
+
+.tableDiv {
+    /* padding-top: 5em; */
+    margin: 5em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 0 5%;
+}
+
+#tableDatas {
+    /* background-color: #c3c3c3;
+    height: 80%;
+    width: 100%;
+    padding: 5%; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* padding-bottom: 2em; */
+    
+    font-family: 'Quicksand';
+}
+#tableDatas thead {
+    height: 5em;
+}
+#tableDatas thead tr {
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    height: 5em;
+    width: 100%;
+    /* border: 1px solid gray; */
+    /* border: 1px solid #dddddd; */
+}
+#tableDatas thead tr th {
+    padding: 0 10px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+#tableDatas tbody {
+    height: 100%;
+}
+#tableDatas tbody tr {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 5rem;
+    border: 1px solid #dddddd;
+}
+#tableDatas tbody tr td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #dddddd;
+    padding: 5px 0;
+}
+#tableDatas tbody tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+
+#tableDatas tbody td #productImage {
+    height: 100%;
+}
+#tableDatas #tBody .inputQuantity {
+    /* width: 100%; */
+    height: 100%;
+    text-align: center;
+    border: none;
+    background: transparent;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+    opacity: 1;
+    height: 30px;
+}
+
+.checkOutButtonDiv {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    height: 10em;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.checkOutButtonDiv .checkOutButton {
+    height: 3rem;
+    width: 15rem;
+    border: 1px solid #fff;
+    border-radius: 15px 15px;
+    background-color: #dddddd;
+    transition: .3s;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Quicksand';
+}
+.checkOutButtonDiv .checkOutButton:hover:not([disabled]) {
+    background-color: #3d69e1;
+    color: #fff;
+}
+
+#tableDatas thead tr #remove-data-th {
+    width: 20%;
+}
+#tableDatas tbody tr #remove-data-td {
+    width: 20%;
+}
+#tableDatas tbody tr #remove-data-td span {
+    /* width: 20%; */
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
+}
