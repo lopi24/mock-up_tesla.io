@@ -31,7 +31,7 @@ const displayData = (data) => {
             `
             <div class="viewProductContainer">
                 <div class="image">
-                    <img src="../../../mock-up_tesla_server/${data.product.productImage}">
+                    <img src="../../${data.product.productImage}">
                 </div>
                 <form class="productDetails">
                     <div class="productId">

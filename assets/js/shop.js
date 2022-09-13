@@ -200,7 +200,7 @@ const displayChargingData = (datas) => {
                             <div class="card">
                                 <div class="card-body">
                                     <div class="sample-image">
-                                        <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
+                                        <img id="image" src="../${data.productImage}">
                                     </div>
                                     <div class="infos">
                                         <div>
@@ -223,7 +223,7 @@ const displayChargingData = (datas) => {
                             <div class="card">
                                 <div class="card-body">
                                     <div class="sample-image">
-                                        <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
+                                        <img id="image" src="../${data.productImage}">
                                     </div>
                                     <div class="infos">
                                         <div>
@@ -288,7 +288,7 @@ const displayVehicleAccessoriesData = (datas) => {
                             <div class="card">
                                 <div class="card-body">
                                     <div class="sample-image">
-                                        <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
+                                        <img id="image" src="../${data.productImage}">
                                     </div>
                                     <div class="infos">
                                         <div>
@@ -309,7 +309,7 @@ const displayVehicleAccessoriesData = (datas) => {
                             <div class="card">
                                 <div class="card-body">
                                     <div class="sample-image">
-                                        <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
+                                        <img id="image" src="../${data.productImage}">
                                     </div>
                                     <div class="infos">
                                         <div>
@@ -374,7 +374,7 @@ const displayApparelData = (datas) => {
                         <div class="card">
                         <div class="card-body">
                             <div class="sample-image">
-                                <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
+                                <img id="image" src="../${data.productImage}">
                             </div>
                             <div class="infos">
                                 <div>
@@ -396,7 +396,7 @@ const displayApparelData = (datas) => {
                         <div class="card">
                             <div class="card-body">
                                 <div class="sample-image">
-                                    <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
+                                    <img id="image" src="../${data.productImage}">
                                 </div>
                                 <div class="infos">
                                     <div>

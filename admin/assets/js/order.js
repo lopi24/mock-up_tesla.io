@@ -55,7 +55,7 @@ const displayOrderData = (data) => {
             `
             <tr id="table-row-data">
                 <td>
-                    <img id="productImage" src="../../../mock-up_tesla_server./${product.productId.productImage}">
+                    <img id="productImage" src="../../${product.productId.productImage}">
                 </td>
                 <td>${product.productId._id}</td>
                 <td>${product.productId.name}</td>

@@ -87,7 +87,7 @@ const displayOrdersData = async (datas) => {
                             &#10006</span>
                             </td>
                             <td>
-                                <img id="productImage" src="../../mock-up_tesla_server./${data.productId.productImage}">
+                                <img id="productImage" src="../${data.productId.productImage}">
                             </td>
                             <td>${data.productId.name}</td>
                             <td id="productPrice">${data.productId.price}</td>

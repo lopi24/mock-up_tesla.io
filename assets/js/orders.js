@@ -116,7 +116,7 @@ const displayOrders = async (orders) => {
                 let TBodTData = document.createElement('td')
                 let tDataImage = document.createElement('img')
                 tDataImage.id = "productImage"
-                tDataImage.src = `../../mock-up_tesla_server./${product.productId.productImage}`
+                tDataImage.src = `../${product.productId.productImage}`
                 // append img to td
                 TBodTData.append(tDataImage)
                 // append td to tr

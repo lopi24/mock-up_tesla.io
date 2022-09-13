@@ -39,7 +39,7 @@ fetch(`https://mockuptesla.herokuapp.com/products/${productId}`).then(res => res
 
     // console.log(data.product.productImage)
 
-    pImage.appendChild(document.createElement('img')).src = '../../mock-up_tesla_server./' + data.product.productImage
+    pImage.appendChild(document.createElement('img')).src = '../' + data.product.productImage
     pName.innerHTML = data.product.name
 	pDesc.innerHTML = data.product.description
 	pPrice.innerHTML = data.product.price
