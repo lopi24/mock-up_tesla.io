@@ -15,7 +15,7 @@ signUpForm.addEventListener('submit', (e) => {
 
 
     if((password !== "" && verifyPassword !== "") && (verifyPassword === password) && (userEmail !== /\S+@\S+\.\S+/ )) {
-        fetch('http://localhost:3000/user/email-exists', {
+        fetch('https://mockuptesla.herokuapp.com/user/email-exists', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -27,7 +27,7 @@ signUpForm.addEventListener('submit', (e) => {
         .then(data => {
             console.log(data)
             if(data.message === 'Email is available.') {
-                fetch('http://localhost:3000/user/signup', {
+                fetch('https://mockuptesla.herokuapp.com/user/signup', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

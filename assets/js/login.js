@@ -8,7 +8,7 @@ loginForm.addEventListener("submit",  async (e) => {
     if(email === "" || password === "") {
         alert("Please input your email and/or password.")
     } else {
-        const response = await fetch('http://localhost:3000/user/login', {
+        const response = await fetch('https://mockuptesla.herokuapp.com/user/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -31,7 +31,7 @@ loginForm.addEventListener("submit",  async (e) => {
 
             // const detailsResponse = await 
 
-            fetch('http://localhost:3000/user/details', {
+            fetch('https://mockuptesla.herokuapp.com/user/details', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

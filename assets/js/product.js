@@ -34,12 +34,12 @@ let quantity = document.querySelector('#quantity')
 let pImage = document.querySelector("#image");
 
 
-fetch(`http://localhost:3000/products/${productId}`).then(res => res.json()).then(data => {
+fetch(`https://mockuptesla.herokuapp.com/products/${productId}`).then(res => res.json()).then(data => {
     console.log(data)
 
     // console.log(data.product.productImage)
 
-    pImage.appendChild(document.createElement('img')).src = '../../backend./' + data.product.productImage
+    pImage.appendChild(document.createElement('img')).src = '../../mock-up_tesla_server./' + data.product.productImage
     pName.innerHTML = data.product.name
 	pDesc.innerHTML = data.product.description
 	pPrice.innerHTML = data.product.price
@@ -57,7 +57,7 @@ fetch(`http://localhost:3000/products/${productId}`).then(res => res.json()).the
         e.preventDefault();
 
     // check if it is already in the cart. If it is already in the cart just add quantity
-        fetch('http://localhost:3000/cart/cart-details', {
+        fetch('https://mockuptesla.herokuapp.com/cart/cart-details', {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${userToken}`
@@ -68,7 +68,7 @@ fetch(`http://localhost:3000/products/${productId}`).then(res => res.json()).the
             console.log(data)
 
             if(data.findCartFromVerifiedUserId[0].products.length === 0) {
-                fetch('http://localhost:3000/cart/add-to-cart', {
+                fetch('https://mockuptesla.herokuapp.com/cart/add-to-cart', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ fetch(`http://localhost:3000/products/${productId}`).then(res => res.json()).the
             } else {
                 console.log('carts has products')
                 console.log(productId)
-                fetch('http://localhost:3000/cart/cart-product-exists', {
+                fetch('https://mockuptesla.herokuapp.com/cart/cart-product-exists', {
                     method: "POST",
                     headers: {
                         'Content-Type':
@@ -106,7 +106,7 @@ fetch(`http://localhost:3000/products/${productId}`).then(res => res.json()).the
                 }).then(messageData => {
                     console.log(messageData.message)
                     if(messageData.message === "There are no Product with that Id inside the cart.") {
-                        fetch('http://localhost:3000/cart/add-to-cart', {
+                        fetch('https://mockuptesla.herokuapp.com/cart/add-to-cart', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -143,7 +143,7 @@ fetch(`http://localhost:3000/products/${productId}`).then(res => res.json()).the
                                 // console.log('quantity: ' + qty.value)
                                 // console.log('totalQuantity: ' + totalQuantity)
 
-                                fetch('http://localhost:3000/cart/update-quantity', {
+                                fetch('https://mockuptesla.herokuapp.com/cart/update-quantity', {
                                     method: "PATCH",
                                     headers: {
                                         'Content-Type': 'application/json',

@@ -47,7 +47,7 @@ let userCartData = [];
 
 const loadViewCart = async () => {
     try {
-        const res = await fetch('http://localhost:3000/cart/cart-details', {
+        const res = await fetch('https://mockuptesla.herokuapp.com/cart/cart-details', {
             headers: {
                 'Authorization': `Bearer ${userToken}`
             }
@@ -87,7 +87,7 @@ const displayOrdersData = async (datas) => {
                             &#10006</span>
                             </td>
                             <td>
-                                <img id="productImage" src="../../backend./${data.productId.productImage}">
+                                <img id="productImage" src="../../mock-up_tesla_server./${data.productId.productImage}">
                             </td>
                             <td>${data.productId.name}</td>
                             <td id="productPrice">${data.productId.price}</td>
@@ -163,7 +163,7 @@ const displayOrdersData = async (datas) => {
             // console.log('changed')
             // console.log(quantityValue[i].accessKey)
 
-            const res = await fetch('http://localhost:3000/cart/update-quantity', {
+            const res = await fetch('https://mockuptesla.herokuapp.com/cart/update-quantity', {
                 method: "PATCH",
                 headers: {
                     'Content-Type': 'application/json',
@@ -192,7 +192,7 @@ const displayOrdersData = async (datas) => {
         // console.log(remove[i])
         remove[i].addEventListener('click', async () => {
             console.log(addedProductId)
-            const res = await fetch('http://localhost:3000/cart/remove-product', {
+            const res = await fetch('https://mockuptesla.herokuapp.com/cart/remove-product', {
                 method: "PATCH",
                 headers: {
                     'Content-Type': 'application/json',
@@ -239,7 +239,7 @@ const displayCheckoutButton = (datas) => {
 
         checkoutBtn.addEventListener('click', async () => {
             console.log(cartId)
-            const res = await fetch('http://localhost:3000/order/checkout', {
+            const res = await fetch('https://mockuptesla.herokuapp.com/order/checkout', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',

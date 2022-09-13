@@ -33,7 +33,7 @@ let userCartData = [];
 
 const loadViewCart = async () => {
     try {
-        const res = await fetch('http://localhost:3000/cart/cart-details', {
+        const res = await fetch('https://mockuptesla.herokuapp.com/cart/cart-details', {
             headers: {
                 'Authorization': `Bearer ${userToken}`
             }
@@ -175,7 +175,7 @@ search.addEventListener('keyup', (e) => {
 
 const loadChargingData = async () => {
     try {
-        const res = await fetch('http://localhost:3000/products')
+        const res = await fetch('https://mockuptesla.herokuapp.com/products')
         const data = await res.json();
         // console.log(data)
         chargingData = await data.products
@@ -200,7 +200,7 @@ const displayChargingData = (datas) => {
                             <div class="card">
                                 <div class="card-body">
                                     <div class="sample-image">
-                                        <img id="image" src="../../backend./${data.productImage}">
+                                        <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
                                     </div>
                                     <div class="infos">
                                         <div>
@@ -223,7 +223,7 @@ const displayChargingData = (datas) => {
                             <div class="card">
                                 <div class="card-body">
                                     <div class="sample-image">
-                                        <img id="image" src="../../backend./${data.productImage}">
+                                        <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
                                     </div>
                                     <div class="infos">
                                         <div>
@@ -264,7 +264,7 @@ search.addEventListener('keyup', (e) => {
 
 const loadVehicleAccessoriesData = async () => {
     try {
-        const res = await fetch('http://localhost:3000/products');
+        const res = await fetch('https://mockuptesla.herokuapp.com/products');
         const data = await res.json();
         vehicleAccessoriesData = await data.products
         await displayVehicleAccessoriesData(vehicleAccessoriesData);
@@ -288,7 +288,7 @@ const displayVehicleAccessoriesData = (datas) => {
                             <div class="card">
                                 <div class="card-body">
                                     <div class="sample-image">
-                                        <img id="image" src="../../backend./${data.productImage}">
+                                        <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
                                     </div>
                                     <div class="infos">
                                         <div>
@@ -309,7 +309,7 @@ const displayVehicleAccessoriesData = (datas) => {
                             <div class="card">
                                 <div class="card-body">
                                     <div class="sample-image">
-                                        <img id="image" src="../../backend./${data.productImage}">
+                                        <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
                                     </div>
                                     <div class="infos">
                                         <div>
@@ -350,7 +350,7 @@ search.addEventListener('keyup', (e) => {
 
 const loadApparelData = async () => {
     try {
-        const res = await fetch('http://localhost:3000/products');
+        const res = await fetch('https://mockuptesla.herokuapp.com/products');
         const data = await res.json();
         apparelData = await data.products;
         await displayApparelData(apparelData);
@@ -374,7 +374,7 @@ const displayApparelData = (datas) => {
                         <div class="card">
                         <div class="card-body">
                             <div class="sample-image">
-                                <img id="image" src="../../backend./${data.productImage}">
+                                <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
                             </div>
                             <div class="infos">
                                 <div>
@@ -396,7 +396,7 @@ const displayApparelData = (datas) => {
                         <div class="card">
                             <div class="card-body">
                                 <div class="sample-image">
-                                    <img id="image" src="../../backend./${data.productImage}">
+                                    <img id="image" src="../../mock-up_tesla_server./${data.productImage}">
                                 </div>
                                 <div class="infos">
                                     <div>
