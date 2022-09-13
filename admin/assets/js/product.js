@@ -12,7 +12,7 @@ let viewProductData = document.querySelector('.viewProductData')
 
 const getData = async () => {
     try {
-        const res = await fetch(`http://localhost:3000/products/${productId}`);
+        const res = await fetch(`https://mockuptesla.herokuapp.com/products/${productId}`);
         const data = await res.json();
         // console.log(data)
         productData = await data
@@ -167,7 +167,7 @@ const displayData = (data) => {
 
         e.preventDefault();
 
-    const res = await fetch(`http://localhost:3000/products/${productId}`, {
+    const res = await fetch(`https://mockuptesla.herokuapp.com/products/${productId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -215,7 +215,7 @@ deleteProduct = () => {
     
     dltBtn.addEventListener('click', async () => {
         // console.log('delete')
-        const res = await fetch(`http://localhost:3000/products/${productId}`, {
+        const res = await fetch(`https://mockuptesla.herokuapp.com/products/${productId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${userToken}`

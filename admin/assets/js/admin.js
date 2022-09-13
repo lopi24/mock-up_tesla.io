@@ -7,7 +7,7 @@ console.log(userToken)
 let products = []
 
 loadData = async () => {
-    const res = await fetch('http://localhost:3000/products')
+    const res = await fetch('https://mockuptesla.herokuapp.com/products')
 
     const data = await res.json();
     products = await data.products

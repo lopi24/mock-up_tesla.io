@@ -6,7 +6,7 @@ console.log(userToken)
 let users = []
 
 const loadData = async () => {
-    const res = await fetch('http://localhost:3000/user', {
+    const res = await fetch('https://mockuptesla.herokuapp.com/user', {
         headers: {
             'Authorization': `Bearer ${userToken}`
         }

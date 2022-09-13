@@ -10,7 +10,7 @@ let orderData = []
 let viewOrderData = document.querySelector('.viewOrderData')
 
 loadData = async () => {
-    const res = await fetch(`http://localhost:3000/order/${orderId}`, {
+    const res = await fetch(`https://mockuptesla.herokuapp.com/order/${orderId}`, {
         headers: {
             'Authorization': `Bearer ${userToken}`
         }

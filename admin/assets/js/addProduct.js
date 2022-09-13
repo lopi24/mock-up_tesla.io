@@ -29,7 +29,7 @@ createProductForm.addEventListener('submit', async (e) => {
     console.log(pFile.files)
 
     if((pName !== "") && (pDescription !== "") && (pPrice !== "") && (pCategory!== "")) {
-        const res = await fetch('http://localhost:3000/products/productName-exist', {
+        const res = await fetch('https://mockuptesla.herokuapp.com/products/productName-exist', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ createProductForm.addEventListener('submit', async (e) => {
         const data = await res.json();
         console.log(data)
         if(data.message === false) {
-            const res = await fetch('http://localhost:3000/products/add-product', {
+            const res = await fetch('https://mockuptesla.herokuapp.com/products/add-product', {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${userToken}`
