@@ -1,3 +1,13 @@
+@font-face {
+    font-family: tesla;
+    src: url(../font/Tesla/TESLA.ttf);
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(../font/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+
 .navs {
     box-shadow: 0px 2px 4px 0px gray;
     background-color: white;

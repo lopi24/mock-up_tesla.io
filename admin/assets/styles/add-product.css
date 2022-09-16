@@ -9,6 +9,15 @@
     justify-content: center;
 }
 
+@font-face {
+    font-family: tesla;
+    src: url(../../../assets/font/Tesla/TESLA.ttf);
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(../../../assets/font/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
 .main {
     display: flex;
     flex-direction: column;

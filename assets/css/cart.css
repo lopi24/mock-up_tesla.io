@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: tesla;
+    src: url(../font/Tesla/TESLA.ttf);
+}
+@font-face {
+    font-family: Quicksand;
+    src: url(../font/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+
 body {
     display: flex;
     flex-direction: column;
